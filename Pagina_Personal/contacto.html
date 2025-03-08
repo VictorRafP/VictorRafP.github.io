@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Pagina personal - Contacto </title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Ubunt">
+		<link rel="stylesheet" href="stylesheet.css" />		
+
+	<script src="contact.js"></script>		
+	</head>
+		<body>
+		<header>
+			<h1>Contacto</h1>
+			<nav>
+						<h2>Navegación</h2>
+		<ul>
+			<li><a href="index.html">Portada</a></li>
+			<li><a href="cv.html">CV</a></li>
+			<li><a href="aficiones.html">Aficiones</a></li>
+			<li><a href="juego.html">Juego</a></li>
+			<li><strong><a href="contacto.html">Contacto</a></strong></li>
+		</ul>
+			</nav>
+		<details>
+		<summary>Controles música de fondo</summary>
+			<audio controls autoplay loop>
+				<source src="moonlight_sonata.mp3" type="audio/mp3" />
+				Tu navegador no soporta el elemento de audio.
+			</audio>
+		</details>
+			<video controls autoplay loop id="video_background" />
+				<source src="fondo_web.mp4" type="video/mp4" />
+				<source src="fondo_web.mp4" type="video/webm"/>
+				<source src="fondo_web.mp4" type="video/ogg"/>
+			</video/>			
+		</header>
+		<main>
+	<h2>Contacta conmigo</h2>
+	<form method="POST" action="envio_falso.html" id="form_contacto" onSubmit="procesa_envio(event);">
+<!--method: como se envia el formulario (por defecto es ="GET"-->
+<!--action: -->
+<!--event pasa información de lo que ha sucedido-->
+		<h3>Formulario de contacto</h3>
+<!--la etiqueta label necesita el atributo for (para) con el valor del id del campo con el que se va a relacionar, permitiendo relacionar el nombre con el campo de formuilario-->
+<!-- la utilización del atributo required no asegura que, mediante F12, elimine la tiqueta y por lo tanto ya no sea obligatorio.
+Por tanto, es necesario pasarlo por JavaScript (por HTML se puede modificar en F12) antes de enviar-->		
+		<p><label for="nombre_contacto">Nombre</label>: <input type="text" id="nombre_contacto" name="nombre" >*</p>
+		<p><label for="fecha_nacimiento_contacto">Fecha de nacimiento</label>: <input type="text" id="fecha_nacimiento_contacto" name="fecha_nacimiento" ></p>
+		<p><label for="email_contacto">e-mail</label>: <input type="email" id="email_contacto" name="email" >*</p>
+		<p><label for="telefono_movil_contacto">Teléfono móvil</label>: <input type="tel" id="telefono_movil_contacto" name="teléfono" ></p>
+		<p><label for="color_contacto">Color favorito</label>: <input type="color" id="color_contacto" name="color" ></p>
+		<p><label for="pokemon_contacto">Pokemon iniclial</label>: <select id="pokemon_contacto" name="pokemon">
+			<option value="1">Bulbasur</option>
+			<option value="4">Charmander</option>
+			<option value="7">Squirtle</option>
+			<option value="54" selected>Psyduck</option>
+		</select></p>
+		<p><label for="mensaje_contacto">Mensaje para contactar</label>: <textarea id="mensaje_contacto" name="mensaje" ></textarea>*</p>
+		
+		<p><output id="salida">Los campos con asterisco <em>(*)</em> son obligatorios</p> 
+		<p><input type="submit" value="¡Contacta!" /></p>
+	</form>
+		</main>
+	<footer>
+	<details>
+  		<summary>Navegación</summary>
+		<nav>
+			<ul>
+				<li><a href="index.html">Portada</a></li>
+				<li><a href="cv.html">CV</a></li>
+				<li><a href="aficiones.html">Aficiones</a></li>
+				<li><a href="juego.html">Juego</a></li>
+				<li><strong><a href="contacto.html">Contacto</a></strong></li>
+			</ul>
+		</nav>
+		</details>
+		<p>Copyright (c) 2024-2025</p>
+	</footer>
+			
+		</body>
+</html>

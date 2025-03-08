@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Pagina personal - Juego </title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Ubunt">
+		<link rel="stylesheet" href="stylesheet.css" />		
+	
+	<script>
+let numero_min = 1;
+let numero_max = 100;
+
+let numero_random = Math.floor(Math.random()*numero_max) + numero_min; //floor redondea hacia abajo / ceil redondea hacia arriba
+
+console.log("El número a adivinar es: "+numero_random);
+
+let info = "Introduce un número entre el "+numero_min+" y el "+numero_max+" para adivinar el número.";
+
+document.getElementById("info").innerHTML = info;
+
+function check_number ()
+{
+	//console.log("Numero!!!")
+		
+	//console.log(text);
+	
+	let valor = document.getElementById("juego_numero").value;
+	let resultado = document.getElementById("resultado");	
+	
+	if (valor < numero_min)
+	{
+		resultado.value = "El número debe de ser "+numero_min+" o mayor";
+		return;
+	}
+	else if (valor > numero_max)
+	{
+		resultado.value = "El número debe de ser "+numero_max+" o menor";
+		return;
+	}
+	
+	let text ="";
+	resultado.value = text;
+	
+	if (valor > numero_random)
+	{
+		text ="El número a adivinar es menor que "+valor;
+	}
+	else if (valor < numero_random)
+	{
+		text = "El número a adivinar es mayor que "+valor;
+	}
+	else{
+		text = "¡Has ganado!";
+	}
+
+}
+	</script>
+
+</head>
+<body>
+	<header>
+		<h1>Juego</h1>
+		<nav>
+			<h2>Navegación</h2>
+			<ul>
+				<li><a href="index.html">Portada</a></li>
+				<li><a href="cv.html">CV</a></li>
+				<li><a href="aficiones.html">Aficiones</a></li>
+				<li><strong><a href="juego.html">Juego</a></strong></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+		<details>
+		<summary>Controles música de fondo</summary>
+			<audio controls autoplay loop>
+				<source src="moonlight_sonata.mp3" type="audio/mp3" />
+				Tu navegador no soporta el elemento de audio.
+			</audio>
+		</details>
+			<video controls autoplay loop id="video_background" />
+				<source src="fondo_web.mp4" type="video/mp4" />
+				<source src="fondo_web.mp4" type="video/webm"/>
+				<source src="fondo_web.mp4" type="video/ogg"/>
+			</video/>
+				
+	</header>
+	<main>
+		<h2>Juegaco</h2>
+		<form>
+			<h3>Adivina el número</h3>
+			<p id="info">Introduce un número entre el 1 y el 100 para adivinar el número.</p>
+			<p>Número: <input type="number" id="juego_numero" name="numero" /></p>
+			<p><output id="resultado">Introduce el número en el campo de texto</output></p>
+			<p><input type="button" value="¡Adivina!" onClick="check_number();" /></p>
+		</form>	
+	</main>
+	<footer>
+	<details>
+  		<summary>Navegación</summary>
+		<nav>
+			<ul>
+				<li><a href="index.html">Portada</a></li>
+				<li><a href="cv.html">CV</a></li>
+				<li><a href="aficiones.html">Aficiones</a></li>
+				<li><strong><a href="juego.html">Juego</a></strong></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+		</nav>
+		</details>
+		<p>Copyright (c) 2024-2025</p>
+	</footer>
+</body>
+</html>
