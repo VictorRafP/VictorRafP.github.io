@@ -115,5 +115,12 @@ color:#ffffff;
 font-size:13px;
 }
 
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Cambia a formato vertical */
+    align-items: center;
+  }
+}
+
 	</style>
 </html>
