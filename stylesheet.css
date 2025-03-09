@@ -168,5 +168,31 @@
         font-size: 16px;
       }
     }
+	
+	.animacion {
+	  width: 200px;
+	  height: 100px;
+	  background-color: blue;
+	  color: white;
+	  text-align: center;
+	  line-height: 100px;
+	  font-weight: bold;
+	  border-radius: 10px;
+	  animation: cambio 1.5s infinite alternate;
+	}
+
+	@keyframes cambio {
+	  0% {
+		background-color: blue;
+		transform: scale(1);
+	  }
+	  100% {
+		background-color: purple;
+		transform: scale(1.05);
+	  }
+	}
+
+
+	
   </style>
 </html>
