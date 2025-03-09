@@ -7,56 +7,6 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Ubunt">
 		<link rel="stylesheet" href="stylesheet.css" />		
-	
-	<script>
-let numero_min = 1;
-let numero_max = 100;
-
-let numero_random = Math.floor(Math.random()*numero_max) + numero_min; //floor redondea hacia abajo / ceil redondea hacia arriba
-
-console.log("El número a adivinar es: "+numero_random);
-
-let info = "Introduce un número entre el "+numero_min+" y el "+numero_max+" para adivinar el número.";
-
-document.getElementById("info").innerHTML = info;
-
-function check_number ()
-{
-	//console.log("Numero!!!")
-		
-	//console.log(text);
-	
-	let valor = document.getElementById("juego_numero").value;
-	let resultado = document.getElementById("resultado");	
-	
-	if (valor < numero_min)
-	{
-		resultado.value = "El número debe de ser "+numero_min+" o mayor";
-		return;
-	}
-	else if (valor > numero_max)
-	{
-		resultado.value = "El número debe de ser "+numero_max+" o menor";
-		return;
-	}
-	
-	let text ="";
-	resultado.value = text;
-	
-	if (valor > numero_random)
-	{
-		text ="El número a adivinar es menor que "+valor;
-	}
-	else if (valor < numero_random)
-	{
-		text = "El número a adivinar es mayor que "+valor;
-	}
-	else{
-		text = "¡Has ganado!";
-	}
-
-}
-	</script>
 
 </head>
 <body>
@@ -93,11 +43,74 @@ function check_number ()
 			<p id="info">Introduce un número <mark>entre el 1 y el 100</mark> para adivinar el número.</p>
 			<p>Número: <input type="number" id="juego_numero" name="numero" /></p>
 			<p><output id="resultado">Introduce el número en el campo de texto</output></p>
-			<p><input type="button" value="¡Adivina!" onClick="check_number();" /></p>
+			<p><input id="adivinanza_button" type="button" value="¡Adivina!" onClick="check_number();" /></p>
+			
+			<p id="contador">Número de intentos: 0</p>
+			<p id="mensaje_ganador"></p> <!-- Mostrar mensaje de victoria -->
 		</form>	
 	</main>
 	<footer>
 		<p>Copyright (c) 2024-2025</p>
+		
+		<script>
+let numero_min = 1;
+let numero_max = 100;
+
+let numero_random = Math.floor(Math.random()*numero_max) + numero_min; //floor redondea hacia abajo / ceil redondea hacia arriba
+
+console.log("El número a adivinar es: "+numero_random);
+
+let info = "Introduce un número entre el "+numero_min+" y el "+numero_max+" para adivinar el número.";
+
+let contadorClicks = 0; // Contador de clics
+
+document.getElementById("info").innerHTML = info;
+
+function check_number ()
+{
+	//console.log("Numero!!!")
+
+	
+	let valor = document.getElementById("juego_numero").value;
+	let resultado = document.getElementById("resultado");	
+	
+	if (valor < numero_min)
+	{
+		resultado.value = "El número debe de ser "+numero_min+" o mayor";
+		return;
+	}
+	else if (valor > numero_max)
+	{
+		resultado.value = "El número debe de ser "+numero_max+" o menor";
+		return;
+	}
+	
+	let text ="";
+	resultado.value = text;
+	
+	if (valor > numero_random)
+	{
+		text ="El número a adivinar es menor que "+valor;
+	}
+	else if (valor < numero_random)
+	{
+		text = "El número a adivinar es mayor que "+valor;
+	}
+	else{
+		text = "¡Has ganado!";
+		button=document.getElementById("adivinanza_button").disabled=true; // Deshabilitar el botón
+		document.getElementById("mensaje_ganador").innerText = "¡Has ganado!"; // Mostrar el mensaje en la página
+	}
+	
+	console.log(text);
+
+contadorClicks++; // Incrementamos el contador de clics
+document.getElementById("contador").innerHTML = "Número de intentos: " + contadorClicks;
+
+
+}
+	</script>
+		
 	</footer>
 </body>
 </html>
