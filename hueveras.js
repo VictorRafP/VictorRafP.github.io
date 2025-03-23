@@ -155,35 +155,35 @@ function crea() {
 
     if (Phaser.Geom.Intersects.RectangleToRectangle(huevera_b.getBounds(), object.getBounds())) {
       if (object.huevo_type == "b") {
-        countdown += 5;
-        score += 10;
+        countdown += 1;
+        score += 1;
         fx.good.play();
         correcto = true;
       } else {
-        countdown -= 5;
-        score -= 5;
+        countdown -= 2;
+        score -= 2;
         fx.bad.play();
       }
     } else if (Phaser.Geom.Intersects.RectangleToRectangle(huevera_m.getBounds(), object.getBounds())) {
       if (object.huevo_type == "m") {
         countdown += 5;
-        score += 10;
+        score += 5;
         fx.good.play();
         correcto = true;
       } else {
-        countdown -= 5;
-        score -= 5;
+        countdown -= 10;
+        score -= 10;
         fx.bad.play();
       }
     } else if (Phaser.Geom.Intersects.RectangleToRectangle(huevera_d.getBounds(), object.getBounds())) {
       if (object.huevo_type == "d") {
-        countdown += 5;
-        score += 20;
+        countdown += 15;
+        score += 15;
         fx.good.play();
         correcto = true;
       } else {
-        countdown -= 5;
-        score -= 5;
+        countdown -= 30;
+        score -= 30;
         fx.bad.play();
       }
     } else {
@@ -227,7 +227,7 @@ function actualiza() {
     music.background.rate = 1.25;
   }
   else {
-    countdown_text.setColor("#000000");
+    countdown_text.setColor("#FFFFFF");
     music.background.rate = 1;
   }
 
