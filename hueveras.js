@@ -229,9 +229,9 @@ function actualiza() {
     countdown_text.setColor("#FF0000");
     music.background.rate = 1.25;
   }
-  else {
-    music.background.rate = 1;
-  }
+  //else {
+   // music.background.rate = 1;
+  //}
 
   for (let i = 0; i < huevos.length; i++) {
     if (huevos[i].falling) {
