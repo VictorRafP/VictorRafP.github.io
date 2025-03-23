@@ -195,7 +195,10 @@ function crea() {
     countdown_text.text = countdown;
     score_text.text = "Puntuación: " + score;
   });
-
+  
+	if (!correcto) {
+		object.falling = true;
+	}
   countdown_text = this.add.text(field_center, 16, countdown, {
     fontSize: 48,
     fontStyle: "bold",
@@ -225,6 +228,9 @@ function actualiza() {
   if (countdown <= 10) {
     countdown_text.setColor("#FF0000");
     music.background.rate = 1.25;
+  }
+  else {
+    music.background.rate = 1;
   }
 
   for (let i = 0; i < huevos.length; i++) {
