@@ -227,6 +227,7 @@ function actualiza() {
     music.background.rate = 1.25;
   }
   else {
+    countdown_text.setColor("#000000");
     music.background.rate = 1;
   }
 
