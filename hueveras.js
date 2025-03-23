@@ -196,9 +196,6 @@ function crea() {
     score_text.text = "Puntuación: " + score;
   });
   
-	if (!correcto) {
-		object.falling = true;
-	}
   countdown_text = this.add.text(field_center, 16, countdown, {
     fontSize: 48,
     fontStyle: "bold",
