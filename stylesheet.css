@@ -13,18 +13,14 @@
 
     header {
       color: #808080;
-	  text-decoration: underline;
     }
-    h1 {
+    header h1 {
 		margin: 0 0 15px 0;
 		padding: 10px 0 10px 8px;
-		border-style: dashed;
 		padding-bottom: 10px;
-		text-transform: uppercase;
     }
-     h2, h3 {
+    header h2, h3 {
       margin: 10px 0 15px 8px;
-      text-decoration: underline;
     }
 	
     a {
