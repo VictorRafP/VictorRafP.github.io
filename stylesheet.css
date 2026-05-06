@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <style>
     /* Estilos generales */
     body {
-		background-color: #1a1a1a; /* Gris muy oscuro */
+		background-color: #1A1A1A; /* Gris muy oscuro */
 		color: #808080;           /* Gris claro */
 		font-family: 'Ubuntu', sans-serif;
 		line-height: 1.6;
@@ -14,16 +13,16 @@
 
     header {
       color: #808080;
+	  text-decoration: underline;
     }
-    h1, h2 {
+    h1 {
 		margin: 0 0 15px 0;
 		padding: 10px 0 10px 8px;
 		border-style: dashed;
-		border-bottom: 2px solid #e74c3c; 
 		padding-bottom: 10px;
 		text-transform: uppercase;
     }
-    h3 {
+     h2, h3 {
       margin: 10px 0 15px 8px;
       text-decoration: underline;
     }
@@ -45,6 +44,8 @@
 	main ul {
 		column-count: 2;
 		list-style-type: square;
+		column-gap: 20px; 
+		max-width: 400px;
 	}
     main {
       padding: 10px 0;
@@ -79,7 +80,7 @@
 		justify-content: center; /* Centra los links */
     }
 	footer li a {
-		background: #2c3e50;
+		background: #9700D1;
 		padding: 10px 15px;
 		border-radius: 5px;
 		color: white;
@@ -87,7 +88,6 @@
 	}
 	footer li a:hover {
 		background: #e74c3c;
-		text-decoration: none;
 	}
 	
     summary {
@@ -107,5 +107,4 @@
       color: #ffffff;
       font-size: 13px;
     }
-  </style>
 </html>
