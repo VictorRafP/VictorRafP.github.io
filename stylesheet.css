@@ -1,7 +1,7 @@
     /* Estilos generales */
     body {
 		background-color: #1A1A1A;
-		color: #FFFFFF;           
+		color: #000000;           
 		font-family: 'Ubuntu', sans-serif;
 		line-height: 1.6;
 		max-width: 850px;
@@ -10,18 +10,19 @@
     }
 
 .document-background-color {
-    background-color: #000000;
+    background-color: #FFFFFF;
     max-width: 850px;
     width: 100%;
     padding: 50px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     box-sizing: border-box;
-
+}
     header {
 	  border-down: 1px solid #444;
-	  background-color: #FFFFFF;
-	  color: #000000;
+	  background-color: #000000;
+	  color: #FFFFFF;
+	  margin: 0px -50px 15px -50px;  /* Margen negativo arriba, derecha e izquierda */
+      padding: 15px 25px 1px;   
     }
     header h1 {
 		margin: 0 0 15px 0;
@@ -34,19 +35,10 @@
 	
     a {
       color: #9700D1;
-      text-decoration: none;
 	  transition: 0.3s;
+	  text-decoration: underline;
     }
-	a:hover {
-    color: #e74c3c;
-    text-decoration: underline;
-}
 
-    p {
-      margin-bottom: 10px;
-	  font-size: 18px;
-    }
-	
 	main ul {
 		column-count: 2;
 		list-style-type: square;
@@ -54,36 +46,41 @@
 		max-width: 400px;
 	}
     main {
-      padding: 10px 0;
+      padding-top: 10px;
+	  font-size:15px;
+      padding-bottom: 2px;
     }
 
 	.logo-item {
 		display: inline-block;
 		text-align: center;
 		margin-right: 20px;
-		background: #252525;
-		padding: 10px;
-		border-radius: 8px;
+		background: #0F0F0F;
+		padding: 2px;
+		border-radius: 3px;
 	}
 	.logo-item img {
 		height: 60px;
 		width: auto;
 		display: block;
-		margin: 0 auto 10px;
 	}
 
     footer {
 		margin-top: 50px;
-		padding-top: 20px;
+		padding-top: 5px;
 		border-top: 1px solid #444;
-		border-down: 1px solid #444;
+		border-bottom: 1px solid #444;
+		background-color: #000000;
+		color: #FFFFFF;
+		margin: 50px -50px -50px -50px;  /* Margen negativo arriba, derecha, abajo e izquierda */
+        padding: 15px 25px 50px;   
     }
-	footer h2 {
-		justify-content: center;
-	}
+	
     footer ul {
+		background-color: #000000;
 		list-style: none;		 /* Quita los puntos */
-		padding: 0;
+		padding-top: 15px;
+		margin-bottom: 0px;
 		display: flex;  		 /* Activa el modo horizontal */
 		flex-wrap: wrap; 		 /* Si no caben, bajan a la siguiente línea */
 		gap: 20px;        		 /* Espacio entre cada enlace */
@@ -105,7 +102,7 @@
       margin: 0 0 8px 0;
     }
 	
-    figure {
+    /*figure {
       margin: auto;
       padding: 5px;
       float: right;
@@ -116,4 +113,4 @@
       text-align: center;
       color: #ffffff;
       font-size: 13px;
-    }
+    }*/
